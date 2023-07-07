@@ -9,9 +9,9 @@ namespace Task1.Classes
     public abstract class DbConnection
     {
         protected bool _disposed;
-        protected string? ConnectionString { get; set; }
+        public string? ConnectionString { get; set; }
         List<string> _dataString = new List<string>();
-        protected TimeSpan TimeOut { get; set; } = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+        public TimeSpan TimeOut { get; set; } = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
         public DbConnection(string connectionString)
         {
             ConnectionString = connectionString;
